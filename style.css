@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100..900&display=swap');
+*{
+    font-family: "Montserret" , sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+
+}
+body{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    background:#5145BA;
+}
+:where(.config-container,.quiz-container){
+   background-color: #fff;
+   border-radius:8px;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.13); 
+}
+
+.config-container{
+    display: none;
+    width:415px;
+    padding:25px;
+    text-align: center;
+    background-color: #fff;
+    border-radius:8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+.config-container .config-title{
+    font-size: 1.31rem;
+
+}
+
+.config-container .config-option{
+    margin-top:25px;
+}
+.config-option .config-title{
+    font-size: 1.23rem;
+    font-weight: 500;
+    margin-bottom:20px ;
+}
+.config-option .category-options{
+    display: grid;
+    gap:15px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.config-option .question-options{
+    display: flex;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:0 30px;
+    justify-content: center;
+}
+
+.config-option button{
+    padding: 12px;
+    font-size: 0.938rem;
+    font-weight: 500;
+    background: #fff;
+    border:1px solid #9B8FFF;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3 ease;
+}
+.config-option button.active{
+    color:#5145BA;
+    border-color:#5145BA ;
+    background: #dfdafd;
+}
+
+.config-option button:hover,
+.quiz-content .answer-option:hover{
+    background: #dad5fd;
+}
+
+.question-options button{
+    flex:1 1 10%;
+
+}
+.config-container .start-quiz-btn,
+.quiz-footer .next-question-btn{
+    color:#fff;
+    border:none;
+    margin-top:30px;
+    font-weight:500 ;
+    background: #5145BA;
+    cursor: pointer;
+    padding :13px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.config-container .start-quiz-btn{
+    margin-top: 30px;
+
+}
+
+.config-container .start-quiz-btn:hover,
+.quiz-footer .next-question-btn:hover{
+    background: #403795;
+
+}
+.quiz-container{
+    width: 480px;
+}
+.quiz-container .quiz-header{
+    display: flex;
+    align-items: center;
+    padding:14px 25px;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.09);
+}
+.quiz-header .quiz-title{
+    font-size: 1.43rem;
+    font-weight: 700;
+}
+
+.quiz-header .quiz-timer{
+    display:flex;
+    width: 70px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    font-weight: 600;
+    padding:7px 9px;
+    border-radius: 6px;
+    background: #32313C;
+}
+.quiz-header .quiz-timer span{
+    font-size: 1.4rem;
+   
+}
+.quiz-content{
+    padding:20px 25px 25px;
+}
+
+.quiz-container .quiz-content{
+    padding: 20px 25px 25px;
+}
+
+.quiz-content .question-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+.quiz-content .answer-options {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;              
+    flex-direction: column;     
+    gap: 15px;                 
+    padding: 0;                 
+}
+
+.quiz-content .answer-option {
+    padding: 13px 16px;
+    background: #F3F1FF;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #B5ACFF;
+    transition: 0.3s ease;
+}
+
+.quiz-container .quiz-footer{
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top:1px solid #c6c6c6;
+}
+
+.next-question-btn {
+  /* Set the button's display to flex to align content */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds space between text and arrow */
+  
+  /* Rest of your button styles */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #5145BA;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.next-question-btn::after {
+  content: '→'; /* The arrow symbol */
+  font-size: 1.2rem; /* Adjust font size for better appearance */
+  margin-left: 5px; /* Add a little space between text and arrow */
+}
+
+
+.quiz-footer .question-status{
+    font-weight: 500;
+}
+
+.quiz-footer .question-status b{
+    font-weight: 600;
+}
+
+.quiz-footer .next-question-btn{
+
+    display: inline-flex;
+    gap:5px;
+    align-items: center;
+    padding: 9px 17px;
+}
